@@ -117,13 +117,13 @@ var cat = {
 */
 
 //Code Here
-var grumpyActivity = function () {
-  for (let i in cat) {
-   
-   
-  }
-};
-var fluffy2ndFriend = cat.catFriends[i].name;
+var grumpyActivity 
+  for (let friends of cat.catFriends) {
+    if (friends.name === 'Grumpy') {
+      grumpyActivity = friends.activities[1]
+    }
+  } ;
+var fluffy2ndFriend = cat.catFriends[1].name;
 
 
 
@@ -163,7 +163,11 @@ var myCar = {
     3. Change atFaultForAccident from true to false.
 */
 function recordCleaner () {
-  
+  for (let record of myCar.accidents) {
+    if (record.atFaultForAccident) {
+      record.atFaultForAccident = false
+    }
+  }
 }
 //Code Here
 
@@ -183,7 +187,19 @@ var numsArr = [ [1, 2, 3, 4], [5, 6], [7, 8, 9, 10, 11]];
         If the number is even, replace it with 'even'.
     4. Return the modified numsArr.
 */
-
+function looper () {
+  for (let i = 0; i < numsArr.length; i++) {
+    for ( let j = 0; j < numsArr[i].length; j++) {
+      if (numsArr[i][j] % 2 === 0) {
+         numsArr[i][j] = 'even'
+      } 
+      else {
+        numsArr[i][j] = 'odd'
+      }
+    }
+  }
+  return numsArr
+}
 //Code Here
 
 
